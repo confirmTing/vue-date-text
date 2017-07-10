@@ -1,13 +1,8 @@
 {
   "name": "vue-date-text",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "A simple Vue.js date-text component",
   "main": "dist/build.js",
-=======
-  "description": "vue2.0日期图文组件",
-  "main": "index.js",
->>>>>>> b7077303efbb31ae1cc710068abcaacc73195793
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,14 +18,13 @@
   "bugs": {
     "url": "https://github.com/confirmTing/vue-date-text/issues"
   },
-<<<<<<< HEAD
   "homepage": "https://github.com/confirmTing/vue-date-text#readme",
   "private": false,
   "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "build": "rm -rf dist && node build/build.js",
+    "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
@@ -112,7 +106,4 @@
     "last 2 versions",
     "not ie <= 8"
   ]
-=======
-  "homepage": "https://github.com/confirmTing/vue-date-text#readme"
->>>>>>> b7077303efbb31ae1cc710068abcaacc73195793
 }
