@@ -1,0 +1,22 @@
+{
+  "name": "vue-date-text",
+  "version": "1.0.0",
+  "description": "vue2.0日期图文组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/confirmTing/vue-date-text.git"
+  },
+  "keywords": [
+    "XuMing123"
+  ],
+  "author": "smallMing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/confirmTing/vue-date-text/issues"
+  },
+  "homepage": "https://github.com/confirmTing/vue-date-text#readme"
+}
