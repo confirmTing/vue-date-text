@@ -43,8 +43,9 @@ Use `v-model` for two-way binding
 ``` html
 <datetext v-model="state.date" name="uniquename"></datetext>
 ```
-```
+
 Use `dateText` if you want only this date can select use prop :disabled="true"
+
 ``` html
 <script>
 var dateText: [
