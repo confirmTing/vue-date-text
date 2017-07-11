@@ -75,6 +75,7 @@
                 v-bind:class="{ 'selected': year.isSelected, 'disabled': year.isDisabled }"
                 @click.stop="selectYear(year)">{{ year.year }}</span>
         </div>
+        <div class="date-modal" v-show="showModal"></div>
   </div>
 </template>
 
@@ -841,16 +842,21 @@ export default {
 $width = 100%
 
 .vdp-datepicker
-    position relative
+    position absolute
+    height: 392px
+    left: 20px
+    right: 20px
+    top: 50%
+    margin-top: -196px
     text-align left
     *
         box-sizing border-box
-
 .vdp-datepicker__calendar
     position absolute
     z-index 100
     background white
     width $width
+    height: 392px
     border 1px solid #ccc
     header
         display block
@@ -909,14 +915,14 @@ $width = 100%
         &:not(.blank):not(.disabled).year
             cursor pointer
             &:hover
-                border 1px solid #4bd
+                border 1px solid #BD9B6E
         &.selected
             background #BD9B6E
             color: #fff
             &:hover
-                background #4bd
+                background #BD9B6E
             &.highlighted
-                background #4bd
+                background #BD9B6E
         &.highlighted
             background #cae5ed
         &.day-text
