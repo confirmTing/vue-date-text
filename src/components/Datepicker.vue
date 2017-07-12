@@ -1,5 +1,5 @@
 <template>
-  <div class="vdp-datepicker" :class="wrapperClass">
+  <div class="vdp-datepicker" :class="wrapperClass" v-show="showDayView || showMonthView || showYearView">
     <div :class="{'input-group' : bootstrapStyling}">
       <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}" v-if="calendarButton" @click="showCalendar"><i :class="calendarButtonIcon"><span v-if="calendarButtonIcon.length === 0">&hellip;</span></i></span>
       <!-- <input
@@ -75,6 +75,7 @@
                 v-bind:class="{ 'selected': year.isSelected, 'disabled': year.isDisabled }"
                 @click.stop="selectYear(year)">{{ year.year }}</span>
         </div>
+        <div class="date-modal" v-show="showModal"></div>
   </div>
 </template>
 
@@ -841,16 +842,21 @@ export default {
 $width = 100%
 
 .vdp-datepicker
-    position relative
+    position absolute
+    height: 392px
+    left: 20px
+    right: 20px
+    top: 50%
+    margin-top: -196px
     text-align left
     *
         box-sizing border-box
-
 .vdp-datepicker__calendar
     position absolute
     z-index 100
     background white
     width $width
+    height: 392px
     border 1px solid #ccc
     header
         display block
@@ -909,14 +915,24 @@ $width = 100%
         &:not(.blank):not(.disabled).year
             cursor pointer
             &:hover
+<<<<<<< HEAD
                 border 1px solid #BD9B60
+=======
+                border 1px solid #BD9B6E
+>>>>>>> 412046ea4eb83bbddf514621fdb4c8981035a30f
         &.selected
             background #BD9B60
             color: #fff
             &:hover
+<<<<<<< HEAD
                 background #BD9B60
             &.highlighted
                 background #BD9B60
+=======
+                background #BD9B6E
+            &.highlighted
+                background #BD9B6E
+>>>>>>> 412046ea4eb83bbddf514621fdb4c8981035a30f
         &.highlighted
             background #cae5ed
         &.day-text
