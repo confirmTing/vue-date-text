@@ -104,7 +104,7 @@ export default {
       default: 'zh'
     },
     disabled: {
-      type: Object
+      type: [Object, Boolean]
     },
     dateText: {
       type: Array
@@ -909,14 +909,14 @@ $width = 100%
         &:not(.blank):not(.disabled).year
             cursor pointer
             &:hover
-                border 1px solid #4bd
+                border 1px solid #BD9B60
         &.selected
-            background #BD9B6E
+            background #BD9B60
             color: #fff
             &:hover
-                background #4bd
+                background #BD9B60
             &.highlighted
-                background #4bd
+                background #BD9B60
         &.highlighted
             background #cae5ed
         &.day-text
@@ -927,11 +927,13 @@ $width = 100%
             &:hover
                 background inherit
         &.day-header
-            font-size 75%
+            font-size 80%
             white-space no-wrap
+            background #BD9B60
+            color #fff
             cursor inherit
             &:hover
-                background inherit
+                background #BD9B60
     .month,
     .year
         width 33.333%
