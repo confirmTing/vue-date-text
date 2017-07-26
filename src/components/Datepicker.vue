@@ -85,7 +85,7 @@ import DateLanguages from '@/utils/DateLanguages.js'
 
 export default {
   props: {
-    value: {
+    defaultValue: {
       validator: function (val) {
         return val === null || val instanceof Date || typeof val === 'string'
       }
@@ -184,6 +184,7 @@ export default {
   },
   watch: {
     value (value) {
+      console.log(value)
       this.setValue(value)
     }
   },
@@ -814,8 +815,8 @@ export default {
     },
 
     init () {
-      if (this.value) {
-        this.setValue(this.value)
+      if (this.defaultValue) {
+        this.setValue(this.defaultValue)
       }
       if (this.isInline) {
         this.showDayCalendar()
@@ -915,24 +916,14 @@ $width = 100%
         &:not(.blank):not(.disabled).year
             cursor pointer
             &:hover
-<<<<<<< HEAD
-                border 1px solid #BD9B60
-=======
                 border 1px solid #BD9B6E
->>>>>>> 412046ea4eb83bbddf514621fdb4c8981035a30f
         &.selected
             background #BD9B60
             color: #fff
             &:hover
-<<<<<<< HEAD
-                background #BD9B60
-            &.highlighted
-                background #BD9B60
-=======
                 background #BD9B6E
             &.highlighted
                 background #BD9B6E
->>>>>>> 412046ea4eb83bbddf514621fdb4c8981035a30f
         &.highlighted
             background #cae5ed
         &.day-text

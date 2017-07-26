@@ -5,11 +5,8 @@
 
     <div class="example">
       <h3>Default datepicker</h3>
-<<<<<<< HEAD
-      <datepicker v-model="vModelExample" ref="datepicker" :disabled="true" :selected="disableTo" :dateText="dateText" @selected="validaDate" :validate="validate"></datepicker>
-=======
-      <datepicker v-model="vModelExample" ref="datepicker" :dateText="dateText" :disabled="{}" @selected="validaDate" :validate="validate"></datepicker>
->>>>>>> 412046ea4eb83bbddf514621fdb4c8981035a30f
+      <datepicker v-model="vModelExample" :default-value
+      ="value" ref="datepicker" :dateText="dateText" :disabled="{}" @selected="validaDate" :validate="validate"></datepicker>
       <button @click="$refs.datepicker.open()">打开</button>
     </div>
   </div>
@@ -30,6 +27,7 @@ export default {
   },
   data () {
     return {
+      value: new Date('2017-07-10'),
       format: 'd MMMM yyyy',
       disabled: {},
       eventMsg: null,
@@ -45,6 +43,10 @@ export default {
         },
         {
           date: '2017-07-11',
+          text: '余6'
+        },
+        {
+          date: '2017-07-12',
           text: '余6'
         }
       ]
