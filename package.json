@@ -1,6 +1,6 @@
 {
   "name": "vue-date-text",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple Vue.js date-text component",
   "main": "dist/build.js",
   "scripts": {

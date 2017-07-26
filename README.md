@@ -28,7 +28,7 @@ Vue.component('my-component', {
 <datetext></datetext>
 ```
 
-*value* prop if passed should be a Date object
+*default-value* prop if passed should be a Date object
 
 ``` html
 <script>
@@ -36,7 +36,7 @@ var state = {
     date: new Date(2016, 9,  16)
 }
 </script>
-<datetext :value="state.date"></datetext>
+<datetext :default-value="state.date"></datetext>
 
 ```
 Use `v-model` for two-way binding
@@ -83,7 +83,7 @@ Inline always open version
 
 | Prop                  | Type          | Default     | Description                                             |
 |-----------------------|---------------|-------------|---------------------------------------------------------|
-| value                 | Date\|String  |             | Date value of the datepicker                            |
+| default-value         | Date\|String  |             | Date value of the datepicker                            |
 | id                    | String        |             | Input id                                                |
 | format                | String        | dd MMM yyyy | Date formatting string                                  |
 | language              | String        | en          | Translation for days and months                         |
