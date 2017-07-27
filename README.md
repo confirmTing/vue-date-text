@@ -84,7 +84,6 @@ Inline always open version
 | Prop                  | Type          | Default     | Description                                             |
 |-----------------------|---------------|-------------|---------------------------------------------------------|
 | default-value         | Date\|String  |             | Date value of the datepicker                            |
-| id                    | String        |             | Input id                                                |
 | format                | String        | dd MMM yyyy | Date formatting string                                  |
 | language              | String        | en          | Translation for days and months                         |
 | calendar-class        | String\|Object|             | CSS class applied to the calendar el                    |
@@ -98,6 +97,7 @@ Inline always open version
 | initial-view          | String        | 'day'       | If 'month' or 'year', open on that view                 |
 | dateText              | Array         |             | Sets text for date [{date: String|Date}, text: String]  |
 | validate              | Function      | () => true  | validata the text for that date                         |
+| closeOnClickModal     | Boolean       | true        | close datepicker when click modal                       |
 
 ## Events
 
@@ -118,6 +118,7 @@ These events are emitted on actions in the datepicker
 ## Date formatting
 
 NB. This is not very robust at all - use at your own risk! Needs a better implementation.
+default 'yyyy-MM-dd'
 
 | Token | Desc                   | Example     |
 |-------|------------------------|-------------|
@@ -195,7 +196,7 @@ Available languages
 | da          | Danish           |          |
 | de          | German           |          |
 | ee          | Estonian         |          |
-| en          | English          | *Default*|
+| en          | English          |          |
 | es          | Spanish          |          |
 | fi          | Finnish          |          |
 | fr          | French           |          |
@@ -221,4 +222,4 @@ Available languages
 | tr          | Turkish          |          |
 | uk          | Ukrainian        |          |
 | vi          | Vietnamese       |          |
-| zh          | Chinese          |          |
+| zh          | Chinese          | *Default*|
