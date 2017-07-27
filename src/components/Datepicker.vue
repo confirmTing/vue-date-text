@@ -183,8 +183,7 @@ export default {
     }
   },
   watch: {
-    value (value) {
-      console.log(value)
+    defaultValue (value) {
       this.setValue(value)
     }
   },
