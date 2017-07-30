@@ -98,6 +98,7 @@ Inline always open version
 | dateText              | Array         |             | Sets text for date [{date: String|Date}, text: String]  |
 | validate              | Function      | () => true  | validata the text for that date                         |
 | closeOnClickModal     | Boolean       | true        | close datepicker when click modal                       |
+| is-fixed              | Boolean       | true        | fixed the datepicker                                    |
 
 ## Events
 

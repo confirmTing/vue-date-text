@@ -6,7 +6,7 @@
     <div class="example">
       <h3>Default datepicker</h3>
       <datepicker v-model="vModelExample" :default-value
-      ="value" ref="datepicker" :dateText="dateText" :disabled="{}" @selected="validaDate" :validate="validate" :closeOnClickModal="false"></datepicker>
+      ="value" ref="datepicker" :dateText="dateText" :disabled="{}" @selected="validaDate" :validate="validate" :closeOnClickModal="false" :is-fixed="true"></datepicker>
       <button @click.stop="$refs.datepicker.open()">打开</button>
     </div>
   </div>

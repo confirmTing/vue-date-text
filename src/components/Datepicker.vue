@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="vdp-datepicker" :class="wrapperClass" v-show="showDayView || showMonthView || showYearView" ref='datepicker'>
+    <div class="vdp-datepicker" :class="wrapperClass" :style="fixed" v-show="showDayView || showMonthView || showYearView" ref='datepicker'>
       <div :class="{'input-group' : bootstrapStyling}">
         <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}" v-if="calendarButton" @click="showCalendar"><i :class="calendarButtonIcon"><span v-if="calendarButtonIcon.length === 0">&hellip;</span></i></span>
         <!-- <input
@@ -96,6 +96,10 @@ export default {
       type: Boolean,
       default: true
     },
+    isFixed: {
+      type: Boolean,
+      default: true
+    },
     format: {
       value: String,
       default: 'yyyy-MM-dd'
@@ -179,6 +183,14 @@ export default {
     }
   },
   computed: {
+    fixed () {
+      if (this.isFixed) {
+        return {
+          'position': 'fixed',
+          'z-index': 100
+        }
+      }
+    },
     formattedValue () {
       if (!this.selectedDate) {
         return null
